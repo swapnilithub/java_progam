@@ -1,0 +1,22 @@
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("Hello World!");
+        int arr[] = {1,5,2,9,22,92,92,5};
+        
+        HashMap<Integer, Integer> hMap = new HashMap <>();
+        for(int nums:arr){
+            hMap.put(nums, hMap.getOrDefault(nums, 0)+1);
+        }
+        System.out.println(hMap);
+        //have to iterate it over the loop
+        for (Map.Entry<Integer, Integer> entry : hMap.entrySet()) {
+                if (entry.getValue() == 2) {
+                    System.out.println("Key " + entry.getKey() + " has value " +entry.getValue());
+                }
+            }
+
+    }
+}
